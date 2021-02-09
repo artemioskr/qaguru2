@@ -1,5 +1,3 @@
-import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
@@ -16,8 +14,7 @@ public class SelenidePageTests {
         $(".UnderlineNav-body").$(byText("Wiki")).click();
 
         $("#wiki-body").shouldHave(text("Welcome to the selenide wiki!"));
-        $("#wiki-pages-box").shouldHave(text("SoftAssertions"))
-                                       .$(byText("SoftAssertions")).click();
+        $("#wiki-pages-box").$(byText("SoftAssertions")).click();
 
         $("#wiki-body").shouldHave(text("Using JUnit5 extend test class"));
     }
