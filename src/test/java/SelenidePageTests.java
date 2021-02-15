@@ -11,7 +11,7 @@ public class SelenidePageTests {
         open("https://github.com/selenide/selenide");
         $(".Box-body").shouldHave(text("Selenide = UI Testing Framework powered by Selenium WebDriver"));
 
-        $(".UnderlineNav-body").$(byText("Wiki")).click();
+        $(byText("Wiki")).click();
 
         $("#wiki-body").shouldHave(text("Welcome to the selenide wiki!"));
         $("#wiki-pages-box").$(byText("SoftAssertions")).click();
